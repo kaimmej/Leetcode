@@ -1,2 +1,3 @@
 # Leetcode
-Leetcode problemsets 
+Leetcode problemsets showing computer science fundamentals. 
+
