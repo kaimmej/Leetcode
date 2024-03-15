@@ -1,3 +1,37 @@
+# METHODS
+#
+#   values() - returns a list of all the values in the dictionary
+#   keys() - returns a list of all the keys in the dictionary
+#   pop() - removes the element with the specified key
+#
+#
+
+def methods():
+    print("METHODS:")
+    print("===================================")
+    # values():
+    #  returns a list of all the values in the dictionary. Its an iterable that can be used in a for loop 
+    users: dict = { 0: 'Mario', 1: 'Luigi', 2: 'Peach' }
+    print(users.values()) # ['Mario', 'Luigi', 'Peach']
+
+    # keys():
+    #  returns a list of all the keys in the dictionary. Its an iterable that can be used in a for loop
+    print(users.keys()) # [0, 1, 2]
+
+    # pop():
+    #  removes the element with the specified key
+    users.pop(0)
+    print(users) # {1: 'Luigi', 2: 'Peach'}
+    #  Something thats nice about pop is that it returns the value of the key that was removed
+    #  If you try to pop something that doesn't exist - you get a key error
+    popped = users.pop(1)
+    print(popped) # Luigi
+
+    # popitem():
+    #  removes the last inserted key-value pair
+    users.popitem()
+    print(users) # {}
+
 
 def main():
     
@@ -8,6 +42,7 @@ def main():
 
     # Accessing elements 
     print("ACCESS:")
+    print("===================================")
     print("   singleItem: ", letterCountDictionary['a'])
     print("   keys: ",letterCountDictionary.keys())
     print("   values: ",letterCountDictionary.values())
@@ -48,4 +83,5 @@ def main():
         print('3 is present')
 
 
+methods()
 main()
