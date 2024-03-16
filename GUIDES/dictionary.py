@@ -82,6 +82,60 @@ def main():
     if 3 in letterCountDictionary.values():
         print('3 is present')
 
+def sort():
+    print("SORT:")
+    print("===================================")
+    # Sorting a dictionary
+    #  You can't sort a dictionary because it is unordered. 
+    #  You can sort the keys or the values of a dictionary
+    #  You can also sort the dictionary by the keys or the values
+    users: dict = { 0: 'Mario', 1: 'Luigi', 2: 'Peach' }
+    print(sorted(users)) # [0, 1, 2]
+    print(sorted(users.values())) # ['Luigi', 'Mario', 'Peach']
+    print(sorted(users.items())) # [(0, 'Mario'), (1, 'Luigi'), (2, 'Peach')]
+    print(sorted(users.items(), key=lambda x: x[1])) # [(1, 'Luigi'), (0, 'Mario'), (2, 'Peach')]
+    print()
 
+    #
+    #
+    # SORT A DICTIONARY BY COUNT OF ITS VALUES
+    #
+    input = [1,1,1,2,2,3,4,4,4,4,4,4]
+    count = {}
+    output = []
+    # add to a countDictionary
+    for i in input:
+        if i in count:
+            count[i] += 1
+        else:
+            count[i] = 1
+    # sort the dictionary by the count of its values
+    sortedInput = sorted(count.items(), key=lambda x:x[1], reverse=True)
+    print("sorted: ", sortedInput)
+    #
+    #   SORTED INPUT: [(4, 6), (1, 3), (2, 2), (3, 1)]
+    #   This is now a list of tuples. Each tuple is a key-value pair from the dictionary
+    #   NOT A DICTIONARY ANYMORE!!!
+    #   So it changes how we need to access the elements below. 
+    #
+
+
+
+    # iterate over the dictionary and return the k most frequest elements
+    for i in range(2):
+        output.append(sortedInput[i][0])
+    print("output: ", output)
+
+    print()
+    print()
+    print()
+
+    
+
+
+
+
+
+sort()
 methods()
 main()

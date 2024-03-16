@@ -13,10 +13,10 @@ def main():
     print("   values: ",letterCountDictionary.values())
     print("   Items: " , letterCountDictionary.items())
     print("   get: ", letterCountDictionary.get('a'))
-    print("   (if no) get: ", letterCountDictionary.get('z'))
-    print("   (if no) get: ", letterCountDictionary.get('z', 0))
-    print("   (if no) get: ", letterCountDictionary.get('z', 'Not Found'))
-    print("   (if no) setdefault: ", letterCountDictionary.setdefault('z', 0))
+    print("   (if no) get: ",           letterCountDictionary.get('z'))
+    print("   (if no) get: ",           letterCountDictionary.get('z', 0))
+    print("   (if no) get: ",           letterCountDictionary.get('z', 'Not Found'))
+    print("   (if no) setdefault: ",    letterCountDictionary.setdefault('z', 0))
     print("  ", letterCountDictionary)
     print()
 
@@ -27,7 +27,6 @@ def main():
 
     # Adding elements 
     letterCountDictionary['f'] = 6
-    letterCountDictionary.append('g', 7)
     letterCountDictionary.update({'h': 8})
 
     # Removing elements

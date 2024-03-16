@@ -14,8 +14,6 @@ class Solution:
 
         for s in strs:
             key = tuple(sorted(s))
-            print(s , sorted(s))
-            print()
 
             if key in keyDict:
                 keyDict[key].append(s)
