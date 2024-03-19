@@ -36,13 +36,21 @@ def main():
     print(a)
 
 
+    # Add elements
+    letterSet.add('f')
+    letterSet.add('g')
+    letterSet.add('h')
+
+
+
     # Removing elements
 
 
-    # Contains key
-
-
-    # contains value 
+    # contains value
+    if 'f' in letterSet:
+        print("'f' exists in letterSet")
+    else:
+        print("'f' does not exist in letterSet")
 
 
 
