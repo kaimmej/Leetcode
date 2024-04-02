@@ -70,7 +70,7 @@ def main():
     letterCountDictionary.popitem()
     # letterCountDictionary.clear()
     print(letterCountDictionary)
-
+ 
     # Contains key
     print('a' in letterCountDictionary)
     print('b' in letterCountDictionary)
@@ -132,10 +132,19 @@ def sort():
 
     
 
-
-
-
-
 sort()
 methods()
 main()
+
+
+
+class helpers:
+    def compareMapToString(self, map, string):
+        for c in string:
+            if c in map:
+                map[c] -= 1
+                if map[c] == 0:
+                    del map[c]
+            else:
+                return False
+        return len(map) == 0
