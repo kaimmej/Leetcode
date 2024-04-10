@@ -44,7 +44,7 @@ def main():
 
 
     # Removing elements
-
+    letterSet.remove('a')
 
     # contains value
     if 'f' in letterSet:
