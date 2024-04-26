@@ -20,3 +20,10 @@ class Solution:
         # max of the two
         depth = max(leftTreeDepth, rightTreeDepth)
         return depth
+
+
+    # def maxDepth(self, root: Optional[TreeNode]) -> int:
+    #     if root is None:
+    #         return 0
+        
+    #     return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
