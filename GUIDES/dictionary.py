@@ -63,6 +63,12 @@ def main():
     # Adding elements 
     letterCountDictionary['f'] = 6
     letterCountDictionary.update({'h': 8})
+    s = "anagram"
+    letterDict = {}
+    for char in s:
+        # conditional, if not present, default to zero
+        letterDict[char] = letterDict.get(char,0) + 1
+
 
     # Removing elements
     letterCountDictionary.pop('a')
@@ -73,7 +79,6 @@ def main():
  
     # Contains key
     print('a' in letterCountDictionary)
-    print('b' in letterCountDictionary)
     if 'c' in letterCountDictionary:
         print('c is present')
 
