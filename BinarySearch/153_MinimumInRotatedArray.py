@@ -23,4 +23,39 @@ class Solution:
                 right = mid
 
         return mid
+
+
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
         
+
+
+        # BINARY SEARCH
+
+        l, r = 0, len(nums)-1
+        if r==0:
+            return nums[0]
+
+        while l <= r:
+            m = (l + r) // 2
+            left_num = nums[l]
+            right_num = nums[r]
+            mid_num = nums[m]
+            print(f"{mid_num=}")
+            if nums[m+1] < mid_num:
+                # we have found the pivot.
+                return nums[m+1]
+            elif nums[m-1] > mid_num:
+                # we have found the pivot
+                return mid_num
+            elif left_num < right_num:
+                # normal array, we return the left most number
+                return left_num
+
+            elif left_num < mid_num:
+                # [3,4,5,1,2] left half is normal, we must search the right.
+                l = m+1
+            
+            elif right_num > mid_num:
+                # [5,1,2,3,4] right have is normal, we must search the left
+                r = m-1
