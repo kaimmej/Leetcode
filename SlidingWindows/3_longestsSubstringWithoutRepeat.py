@@ -33,3 +33,43 @@ class Solution(object):
 
         # use a hashSet
         return best
+
+
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+
+        letterSet = set()
+        maxSequenceLength = 0
+        stringLength = len(s)
+
+        if stringLength < 1:
+            return maxSequenceLength
+
+        left, right = 0, 0
+
+        while right < stringLength:
+            # is right pointing at a new character?
+            currChar = s[right]
+
+            if currChar in letterSet:
+                # pop ... a number of letters... but dont know how many. 
+                # We dont want to pop until we reach right... we wnat to pop until there is no longer a conflict with right. 
+                # until we pop currChar... 
+                while currChar in letterSet:
+                    letterSet.remove(s[left])
+                    left += 1
+            
+            # else:
+                # add to the letter set and calculate the new max
+                # letterSet.add(currChar)
+                # currSequenceLength = right-left
+                # maxSequenceLength = max(currSequenceLength, maxSequenceLength)
+            letterSet.add(currChar)
+            currSequenceLength = right-left + 1
+            # print(currSequenceLength)
+            # print(f"{left=} : {right=}")
+            maxSequenceLength = max(currSequenceLength, maxSequenceLength)
+            right += 1
+        
+        return maxSequenceLength
