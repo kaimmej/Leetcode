@@ -25,3 +25,31 @@ class Solution(object):
             r += 1          # increment right pointer. Might break if at the end.
         
         return bestProfit
+
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        
+        
+
+        arrayLength = len(prices)
+        maxP = 0
+
+        # Early exit solution
+        if arrayLength <= 1:
+            return maxP
+
+        left, right = 0, 1
+
+        while right < arrayLength:
+
+            # Calculate profit? 
+            
+            if prices[left] < prices[right]:
+                currentProfit = prices[right]-prices[left]
+                maxP = max(currentProfit, maxP)
+            else:
+                left = right
+            right += 1
+        
+        return maxP
