@@ -55,7 +55,16 @@ def main():
     print("  ", letterCountDictionary)
     print()
 
+    # ITERATING OVER ELEMENTS
+    # Ex1 
+    frequency = {}
+    nums = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+    for num in nums:
+        frequency[num] = frequency.get(num, 0) + 1
+    for num, count in frequency.items(): # <- .items() returns a list of tuples
+        print(num, count)
 
+    # Ex2 
     for key in letterCountDictionary:
         print(key, letterCountDictionary[key])
     
