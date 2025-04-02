@@ -17,6 +17,7 @@ def main():
         simpleArray[i] *= postfix
         postfix *= nums[i]
 
-
+    # how do i delete from an array?
+    # del simpleArray[0]
 
 main()
