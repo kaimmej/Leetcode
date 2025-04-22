@@ -30,6 +30,42 @@ def main():
     printList(head)
 
 
+# WORKING WITH DUMMY NODES....
+# WHY? Dummy nodes give us flexibility in our code.
+    #   They help us avoid edge cases and make our code cleaner.
+    #   They also help us avoid null pointer exceptions
+    
+    # TWO WAYS TO MAKE A LIST NODE
+    dummy = ListNode()
+    dummy = ListNode(0, head)
+
+    dummy = dummy.next
+    # return dummy
+
+# REVERSE A LINKED LIST
+    prev = None
+    while curr:
+        tmp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = tmp
+
+
+## USING FAST AND SLOW POINTERS 
+#   This is called the Floyd's Tortoise and Hare algorithm.
+    # Find the middle of the list using Slow and Fast pointers 
+    slow, fast = head, head.next
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+
+
+
+
+
+
+
 
 
 # Creating a linked list
