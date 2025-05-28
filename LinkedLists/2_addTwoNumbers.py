@@ -42,4 +42,56 @@ class Solution(object):
             tail.next = newNode
 
         return head
+
+
+# SOLUTION 2
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         
+        dummy = ListNode()
+        cur = dummy
+
+        # Creating remainder outside the loop so it is still active to be checked after the While loop exits.
+        remainder = 0
+
+        # Go through, add the numbers together and create a new Node. 
+        while l1 or l2: 
+            sumNode = ListNode()
+            cur.next = sumNode
+            val1 = 0
+            val2 = 0
+            if l1:
+                val1 = l1.val
+            if l2:
+                val2 = l2.val
+            sum = val1 + val2 + remainder
+            if remainder != 0:
+                remainder = 0
+
+            if sum >= 10:
+                print(sum)
+                remainder = 1
+                sum = sum % 10
+            sumNode.val = sum
+
+            cur = cur.next
+            if l1:
+                l1 = l1.next
+            if l2:
+                l2 = l2.next
+
+
+
+
+        if remainder == 1: 
+            sumNode = ListNode(1)
+            cur.next = sumNode
+            remainder = 0
+
+        
+        return dummy.next
