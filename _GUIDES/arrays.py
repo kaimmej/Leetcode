@@ -20,4 +20,11 @@ def main():
     # how do i delete from an array?
     # del simpleArray[0]
 
+
+    # 
+    #
+    #   ITERATING
+    for i, num in enumerate(nums):
+        print(f"Index: {i}, Value: {num}")
+
 main()

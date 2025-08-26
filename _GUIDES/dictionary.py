@@ -36,11 +36,11 @@ def methods():
 def main():
     
     letterCountDictionary = { 'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5 }
-    print(letterCountDictionary)
-    print()
-    print()
 
-    # Accessing elements 
+    # 
+    #
+    #   ACCESSING ELEMENTS
+    # 
     print("ACCESS:")
     print("===================================")
     print("   singleItem: ", letterCountDictionary['a'])
@@ -54,6 +54,18 @@ def main():
     print("   (if no) setdefault: ",    letterCountDictionary.setdefault('z', 0))
     print("  ", letterCountDictionary)
     print()
+
+
+    #
+    #
+    #   ADDING ELEMENTS
+    # 
+    letterCountDictionary['f'] = 6
+    letterCountDictionary['f'] = letterCountDictionary.get('g', 7)      # .get() will not modify the dictionary.
+    letterCountDictionary.setdefault('h', 8)                            # .setdefault() modifies the dictionary.
+
+
+
 
     # ITERATING OVER ELEMENTS
     # Ex1 
