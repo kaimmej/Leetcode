@@ -27,4 +27,25 @@ def main():
     for i, num in enumerate(nums):
         print(f"Index: {i}, Value: {num}")
 
+
+
+
+    #
+    #
+    #   LIST OF STRINGS
+
+    # How can i add a string to the list?
+    list_a = ["watermelon", "peach", "cherry"]
+    list_b = ["apple", "orange", "banana"]
+
+    # Concatenating two lists
+    combinedList = list_a + list_b
+    print(combinedList)
+
+    # List of lists
+    list_of_lists = [list_a, list_b]
+    print(list_of_lists)
+
+    stringArray.append("date")
+    print(stringArray)
 main()

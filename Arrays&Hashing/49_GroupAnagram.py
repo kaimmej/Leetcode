@@ -55,3 +55,45 @@ class Solution:
         for anagram_group in grouped_anagrams_dictionary.values():
             result.append(anagram_group)
         return result
+    
+
+
+
+
+#
+#
+# Solution 3 
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        
+        result = {} # mappings of the frequencyArrays to the list of words that were given
+
+        for word in strs:
+            frequencyArray = self.parseWord_intoFrequencyArray(word)
+            # print(f" {word} : {frequencyArray}")
+
+            if frequencyArray not in result:
+                # print("NEW")
+                result[frequencyArray] = []
+            
+            result[frequencyArray].append(word)
+        
+        returnList = []
+
+        for wordList in result.values():
+            returnList.append(wordList)
+        
+
+        return returnList
+
+
+
+
+    def parseWord_intoFrequencyArray(self, s: str) -> List[str]:
+        
+        # Character count array, initialized to zeros and we want it to be 26 long. 
+        count = [0] * 26
+
+        for c in s:
+            count[ord(c) - ord("a")] += 1
+        
+        return tuple(count)
