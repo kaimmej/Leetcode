@@ -46,6 +46,4 @@ def main():
     list_of_lists = [list_a, list_b]
     print(list_of_lists)
 
-    stringArray.append("date")
-    print(stringArray)
 main()

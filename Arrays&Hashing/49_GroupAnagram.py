@@ -7,7 +7,7 @@
 #   Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs):
         
         output = []
         keyDict = {}
@@ -37,7 +37,7 @@ class Solution:
 # I like this solution too. 
 # I like the naming that i did here more than before... 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs):
         
         grouped_anagrams_dictionary = {}
         for str in strs:
@@ -63,7 +63,7 @@ class Solution:
 #
 #
 # Solution 3 
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs):
         
         result = {} # mappings of the frequencyArrays to the list of words that were given
 
@@ -88,7 +88,7 @@ class Solution:
 
 
 
-    def parseWord_intoFrequencyArray(self, s: str) -> List[str]:
+    def parseWord_intoFrequencyArray(self, s: str):
         
         # Character count array, initialized to zeros and we want it to be 26 long. 
         count = [0] * 26
