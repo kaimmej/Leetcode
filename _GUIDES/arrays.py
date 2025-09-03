@@ -21,7 +21,6 @@ def main():
     # del simpleArray[0]
 
 
-    # 
     #
     #   ITERATING
     for i, num in enumerate(nums):

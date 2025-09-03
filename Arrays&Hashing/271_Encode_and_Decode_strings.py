@@ -9,12 +9,9 @@ class Codec:
         # Enocded character will be "_". So it will look like "5_Hello"
         
         for word in strs:
-            print(word)
             wordLength = len(word)
             res = res + str(wordLength) + "_" + word
         
-        print(res)
-        # return res[1:]
         return res
 
     def decode(self, s):
@@ -45,6 +42,4 @@ class Codec:
                 curr += 1
                 tempChar = s[curr]
 
-
-            curr += 1 # we want to now discard the "_"
             wordLength = int(letterCount)
