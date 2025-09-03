@@ -32,3 +32,41 @@ class Solution(object):
             output[i] = left[i]*right[i]
         
         return output
+
+
+    def productExceptSelf(self, nums):
+        
+        arrayLength = len(nums)
+        if arrayLength <= 1:
+            return nums
+
+        preArray = [1] * arrayLength
+        postArray = [1] * arrayLength
+        returnArray =  [1] * arrayLength
+
+        # Two passes through
+        # First pass... backwards from the end
+        #   - multiply, and keep track of everything we have seen so far.
+        #   preArray
+        
+        # Second array... multiply elements seen so far together
+        #   postArray
+
+        # print(preArray)
+        # print(postArray)
+
+        for i in range(arrayLength-2, -1, -1):
+            # print(f" {i} : {nums[i]} : {preArray[i]}")
+            preArray[i] = preArray[i+1] * nums[i+1]
+
+
+        for i in range(1, arrayLength):
+            postArray[i] = postArray[i-1] * nums[i-1]
+
+        # print(postArray)
+
+        for i in range(arrayLength):
+            # print(f" {i} : {postArray[i]} : {preArray[i]}")
+            returnArray[i] = postArray[i] * preArray[i]
+        
+        return returnArray
