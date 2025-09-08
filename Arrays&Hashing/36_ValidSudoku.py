@@ -65,3 +65,60 @@ class Solution:
                     else:
                         numberSet.add(num)
         return True
+
+
+
+
+
+
+# TRY 2
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        width = len(board[0])
+        height = len(board)
+        if width != 9 or height != 9:
+            return False
+
+
+        # Are the rows Valid?
+        for rowNum in range(height):
+            print(f" {rowNum}: {board[rowNum]}")
+            if not self.isValidRow(board[rowNum]):
+                return False
+        
+        # Are the columns Valid?
+        # Splice together a column 
+        for i in range(width):
+            column = 
+
+        # Are the grids Valid?
+
+
+        # If we get here, then it is a valid sudoku board
+        return True
+    
+
+    def isValidColumn(self, column: List[str]) -> bool:
+        pass
+    
+
+    def isValidRow(self, row: list[str]) -> bool:
+        numberSet = set()
+
+        for i, number in enumerate(row):
+            # print(f" {i}: {number}")
+            if number == ".":
+                continue
+            
+            # If the number is already in hte set, we return False
+            # else, add to the numberSet
+            if number in numberSet:
+                return False
+            else:
+                numberSet.add(number)
+                
+        # print(numberSet)
+        return True
+
+    def isValidGrid(self, row1: List[str], row2: List[str], row3: List[str]):
+        pass
