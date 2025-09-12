@@ -26,8 +26,14 @@ def main():
     for i, num in enumerate(nums):
         print(f"Index: {i}, Value: {num}")
 
+    arrayLength = 10
+    # Backwards skipping the last element of the array
+    for i in range(arrayLength-2, -1, -1):
+        print(i)
 
-
+    # Forwards, skipping the first element of the array
+    for i in range(1, arrayLength):
+        print(i)
 
     #
     #
