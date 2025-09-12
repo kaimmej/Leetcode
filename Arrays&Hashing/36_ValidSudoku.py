@@ -89,7 +89,10 @@ class Solution:
         # Are the columns Valid?
         # Splice together a column 
         for i in range(width):
-            column = 
+            column = []
+            for row in range(height):
+                column.append(board[row][i])
+            print(column)
 
         # Are the grids Valid?
 
