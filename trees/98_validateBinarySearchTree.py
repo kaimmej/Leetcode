@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+    def isValidBST(self, root) -> bool:
 
         # Recursion...
         if not root:
@@ -15,7 +15,7 @@ class Solution:
         return self.isValidBST_SubTree(root.left, upperBound=root.val, lowerBound=None) and self.isValidBST_SubTree(root.right, lowerBound=root.val, upperBound=None)
 
 
-    def isValidBST_SubTree(self, root: Optional[TreeNode], upperBound: Optional, lowerBound: Optional):
+    def isValidBST_SubTree(self, root, upperBound, lowerBound):
 
         if not root:
             return True
